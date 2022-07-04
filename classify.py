@@ -119,16 +119,13 @@ while True:
 
             print(max_label,": ",max_score)
             
-                                                                                                                      
-        #文件夹里删除图片                                                                                                        
-        os.remove('/home/pi/Desktop/pics/'+ str(all_list[-1]))    
+            #文件夹里删除图片                                                                                                        
+            os.remove('/home/pi/Desktop/pics/'+ str(all_list[-1]))                                                                                                           
         
-        
-        
-        #腾讯云COS删除文件
-        response = client.delete_object(Bucket='avh-1312691646',Key=str(all_list[-1]))  # 云端删除图片
-                                                                                                                  
-        print('----please take another photo----')
+            #腾讯云COS删除文件
+            response = client.delete_object(Bucket='avh-1312691646',Key=str(all_list[-1]))  # 云端删除图片
+
+            print('----please take another photo----')
 
 
 
