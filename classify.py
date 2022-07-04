@@ -68,8 +68,7 @@ while True:
             #识别，显示结果
             #print("\n--------Preprocess Image-------------------\n")
             ### Fetch image & preprocess it to match the input requirements of the model
-            file_path = "/home/pi/Desktop/pics/'+ str(all_list[-1])"
-            print(file_path)
+            file_path = '/home/pi/Desktop/pics/'+ str(all_list[-1])
             img = Image.open(file_path).convert('RGB')
             img = img.resize(size)
             img = np.array(img)
